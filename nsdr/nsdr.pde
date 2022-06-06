@@ -6,8 +6,10 @@ void setup() {
 }
 void draw() {
   background(0, 0, 255);
+  pushMatrix();
   translate(width/2, height/2);
   rotate(radians(frameCount)*2);
   image(nsdr, 0, 0, width, height);
-  if (frameCount>900)exit();
+  popMatrix();
+  //if (frameCount>900)exit();
 }
